@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+	Options -MultiViews
+	RewriteEngine On
+	RewriteBase /lexi
+	
+	#RewriteCond %{HTTP_REFERER} !^$
+	#RewriteCond %{HTTP_REFERER} !^http(s)?://www.battleship.ru.*$ [NC]
+	#RewriteRule \.(jpe?g|bmp|gif|png|css|zip|pdf|txt|doc)$ - [NC,F,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	
+	RewriteCond %{REQUEST_URI} /$ [NC]
+	RewriteRule (.*)(/)$ $1 [L,R=301]
+	
+	RewriteRule ^api/v0.2[0-9]{0,1}/(.*)$ api.php [L,QSA]
+	RewriteRule ^api/v0.1[0-9]{0,1}/(.*)$ api.v0-1.php [L,QSA]
+	RewriteRule ^api([^\.].*)?$ api.v0-1.php [L,QSA]
+	RewriteRule ^calendars(.*)?$ calendars.php [L,QSA]
+	
+</IfModule>

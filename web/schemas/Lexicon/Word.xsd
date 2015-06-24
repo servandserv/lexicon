@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:ru:battleship:Lexicon:Word"
+	xmlns:ns0="urn:ru:battleship:Lexicon:Link"
+	targetNamespace="urn:ru:battleship:Lexicon:Word">
+
+<xsd:import schemaLocation="Link.xsd" namespace="urn:ru:battleship:Lexicon:Link" /> 
+
+<xsd:element name="Word">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="autoid" type="xsd:string" minOccurs="1" />
+            <xsd:element name="word" type="xsd:string" minOccurs="1" />
+            <xsd:element name="trans" type="xsd:string" minOccurs="1" />
+            <xsd:element name="desc" type="xsd:string" minOccurs="1" />
+			<xsd:element name="lastmod" type="xsd:string" minOccurs="0" />
+			<xsd:element ref="ns0:Link" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

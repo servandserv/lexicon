@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="urn:ru:battleship:Lexicon:Attempt"
+	xmlns:w="urn:ru:battleship:Lexicon:Word"
+	xmlns:s="urn:ru:battleship:Lexicon:Session"
+	targetNamespace="urn:ru:battleship:Lexicon:Attempt">
+
+<xsd:import schemaLocation="Word.xsd" namespace="urn:ru:battleship:Lexicon:Word" /> 
+<xsd:import schemaLocation="Session.xsd" namespace="urn:ru:battleship:Lexicon:Session" /> 
+
+<xsd:element name="Attempt">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="w:Word" />
+			<xsd:element ref="s:Session" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>

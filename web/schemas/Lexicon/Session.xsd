@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:ru:battleship:Lexicon:Session"
+    xmlns:ns0="urn:ru:battleship:Lexicon:Link"
+    xmlns:ns1="urn:ru:battleship:Lexicon:User"
+    targetNamespace="urn:ru:battleship:Lexicon:Session">
+
+<xsd:import schemaLocation="User.xsd" namespace="urn:ru:battleship:Lexicon:User" />
+<xsd:import schemaLocation="Link.xsd" namespace="urn:ru:battleship:Lexicon:Link" />
+
+<xsd:element name="Session">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="userId" type="xsd:string" minOccurs="0" />
+            <xsd:element name="code" type="xsd:string" minOccurs="0" />
+            <xsd:element name="dtStart" type="xsd:string" minOccurs="0" />
+            <xsd:element name="used" type="xsd:integer" minOccurs="0" />
+            <xsd:element name="nextRule" type="xsd:integer" minOccurs="0" />
+            <xsd:element name="repeatRule" type="xsd:integer" minOccurs="0" />
+            <xsd:element name="repeatCounter" type="xsd:integer" minOccurs="0" />
+            <xsd:element name="attempts" type="xsd:integer" minOccurs="0" />
+            <xsd:element name="lastmod" type="xsd:string" minOccurs="0" />
+            <xsd:element ref="Word" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element name="last" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="ns0:Link" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Sessions">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element ref="Session" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element ref="ns0:Link" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+   </xsd:complexType>
+</xsd:element>
+   
+<xsd:element name="Word">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string" minOccurs="1" />
+            <xsd:element name="userId" type="xsd:string" minOccurs="1" />
+            <xsd:element name="code" type="xsd:string" minOccurs="1" />
+            <xsd:element name="word" type="xsd:string" minOccurs="1" />
+            <xsd:element name="cAttempts" type="xsd:integer" minOccurs="1" />
+            <xsd:element name="tAttempts" type="xsd:integer" minOccurs="1" />
+            <xsd:element name="fAttempts" type="xsd:integer" minOccurs="1" />
+            <xsd:element name="status" type="xsd:string" minOccurs="1" />
+            <xsd:element name="lastmod" type="xsd:string" minOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+   
+</xsd:schema>

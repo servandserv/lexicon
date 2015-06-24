@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="urn:ru:battleship:Lexicon:Link"
+    targetNamespace="urn:ru:battleship:Lexicon:Link">
+
+<xsd:element name="Link">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="resource" type="xsd:anyType" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:attribute name="rel" type="xsd:string" minOccurs="0" />
+        <xsd:attribute name="href" type="xsd:string" minOccurs="0" />
+    </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
