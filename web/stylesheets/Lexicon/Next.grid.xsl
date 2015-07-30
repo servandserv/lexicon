@@ -31,7 +31,7 @@
             <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
             <!--link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet'-->
             <!--link href="styles/typography.css" rel="stylesheet" type="text/css" /-->
-            <link href="../../css/semanticss.css" rel="stylesheet" type="text/css" />
+            <link href="components/semanticss/dist/css/semanticss.css" rel="stylesheet" type="text/css" />
             <link href="styles/lexicon.css" rel="stylesheet" type="text/css" />
             <!--link rel="stylesheet" href="http://basehold.it/20/0/0/0/0.5" /-->
             <style>
@@ -163,16 +163,16 @@
                     -o-animation-fill-mode:forwards;
                     animation-fill-mode:forwards;
                      
-                    -webkit-animation-duration:2s;
-                    -moz-animation-duration:2s;
-                    -o-animation-duration:2s;
-                    animation-duration:2s;
+                    -webkit-animation-duration:1s;
+                    -moz-animation-duration:1s;
+                    -o-animation-duration:1s;
+                    animation-duration:1s;
                 }
                     
                 .fade-in.one {
-                    -webkit-animation-delay: 3s;
-                    -moz-animation-delay: 3s;
-                    animation-delay: 3s;
+                    -webkit-animation-delay: 1s;
+                    -moz-animation-delay: 1s;
+                    animation-delay: 1s;
                     
                     font-size: 1.4rem;
                     line-height: 20px;

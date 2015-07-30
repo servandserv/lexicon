@@ -31,7 +31,7 @@
             <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
             <!--link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet'-->
             <!--link href="styles/typography.css" rel="stylesheet" type="text/css" /-->
-            <link href="../../css/semanticss.css" rel="stylesheet" type="text/css" />
+            <link href="components/semanticss/dist/css/semanticss.css" rel="stylesheet" type="text/css" />
             <!--link href="styles/gridism.css" rel="stylesheet" type="text/css" /-->
             <link href="styles/lexicon.css" rel="stylesheet" type="text/css" />
             <!--link rel="stylesheet" href="http://basehold.it/20/0/0/0/0.5" /-->
